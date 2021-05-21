@@ -1,0 +1,28 @@
+﻿@model CompanyModel
+
+
+<form enctype="multipart/form-data" asp-controller="Company" asp-action="Add" method="post" role="form">
+    <div class="form-group" style="margin-top: 40px;">
+        <label>Name</label>
+        <input type="text" class="form-control" placeholder="Enter Company Name" asp-for="Name">
+    </div>
+    <div class="form-group" style="margin-top: 40px;">
+        <label>Email</label>
+        <input type="text" class="form-control" placeholder="Enter Company Email" asp-for="Email">
+    </div>
+    <div class="form-group" style="margin-top: 40px;">
+        <label>Website</label>
+        <input type="text" class="form-control" placeholder="Enter Company Website" asp-for="Website_URL">
+    </div>
+
+    <div class="form-group">
+        <label>First Image</label>
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" id="customFile1" asp-for="LogoPath" accept=".jpg, .jpeg, .png">
+            <label class="custom-file-label" for="customFile1">Choose file</label>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" style="margin-top: 40px;">Submit</button>
+</form>
+

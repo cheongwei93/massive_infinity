@@ -1,0 +1,39 @@
+﻿@model massive_infinity.Data.Entities.Company
+
+@{ 
+
+    Guid ID = Model.ID;
+
+    string logo = null;
+    logo = "data:image/png;base64," + Model.Logo;
+}
+
+
+<div class="container">
+    <div class="row d-flex justify-content-center" style="align-self:center; align-content: center; ">
+        <div class="justify-content-center">
+            <img src=@logo style="max-height: 400px; max-width: 600px;">
+            <div class="row" style="margin-left: 40px">
+                <p style="font-size: 30px; font-weight:bold">Company Name:</p>
+                <p style="font-size: 30px; margin-left: 40px">@Model.Name</p>
+            </div>
+
+            <div class="row" style="margin-left: 40px">
+                <p style="font-size: 30px; font-weight:bold">Email:</p>
+                <p style="font-size: 30px; margin-left: 40px">@Model.Email</p>
+            </div>
+
+            <div class="row" style="margin-left: 40px">
+                <p style="font-size: 30px; font-weight:bold">Website:</p>
+                <p style="font-size: 30px; margin-left: 40px">@Model.Website_URL</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<a asp-action="Employee" class="btn btn-primary" asp-route-ID="@ID">
+    Employee List
+</a>
+
+

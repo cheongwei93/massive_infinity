@@ -1,0 +1,33 @@
+﻿
+@model massive_infinity.Data.Entities.Employee
+
+@{ 
+    String temp = ViewData["ID"].ToString();
+    Guid ID = Guid.Parse(temp);
+
+}
+
+<form asp-controller="Company" asp-action="InsertNewEmployee" method="post" role="form">
+    <div class="form-group" style="margin-top: 40px;">
+        <label>First Name</label>
+        <input type="text" class="form-control" placeholder="Enter First Name" asp-for="First_Name">
+    </div>
+    <div class="form-group" style="margin-top: 40px;">
+        <label>Last Name</label>
+        <input type="text" class="form-control" placeholder="Enter Last Name" asp-for="Last_Name">
+    </div>
+    <div class="form-group" style="margin-top: 40px;">
+        <label>Company ID</label>
+        <input type="text"  value="@ID" class="form-control" placeholder=@ID asp-for="Company" readonly>
+    </div>
+    <div class="form-group" style="margin-top: 40px;">
+        <label>Email</label>
+        <input type="text" class="form-control" placeholder="Enter Email" asp-for="Email">
+    </div>
+    <div class="form-group" style="margin-top: 40px;">
+        <label>Phone</label>
+        <input type="text" class="form-control" placeholder="Enter Phone" asp-for="Phone">
+    </div>
+
+    <button type="submit" class="btn btn-primary" style="margin-top: 40px;">Submit</button>
+</form>

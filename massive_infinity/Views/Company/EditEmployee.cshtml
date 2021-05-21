@@ -1,0 +1,35 @@
+﻿@model EmployeeModel
+
+<form asp-controller="Company" asp-action="UpdateEmployee">
+    <div class="form-group" style="margin-top: 40px;">
+        <label>ID</label>
+        <input type="text" class="form-control" value="@ViewBag.ID" asp-for="ID" readonly>
+    </div>
+
+    <div class="form-group" style="margin-top: 40px;">
+        <label>First Name</label>
+        <input type="text" class="form-control" value="@ViewBag.FirstName" asp-for="First_Name">
+    </div>
+
+    <div class="form-group" style="margin-top: 40px;">
+        <label>Last Name</label>
+        <input type="text" class="form-control" value="@ViewBag.LastName" asp-for="Last_Name">
+    </div>
+
+    <div class="form-group" style="margin-top: 40px;">
+        <label>Company</label>
+        <input type="text" class="form-control" value="@ViewBag.Company" asp-for="Company" readonly>
+    </div>
+
+    <div class="form-group" style="margin-top: 40px;">
+        <label>Email</label>
+        <input type="text" class="form-control" value="@ViewBag.Email" asp-for="Email">
+    </div>
+
+    <div class="form-group" style="margin-top: 40px;">
+        <label>Phone</label>
+        <input type="text" class="form-control" value="@ViewBag.Phone" asp-for="Phone">
+    </div>
+
+    <button type="submit" class="btn btn-primary" style="margin-top: 40px;">Submit</button>
+</form>
